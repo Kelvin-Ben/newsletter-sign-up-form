@@ -14,9 +14,9 @@
   <div class="popup-container">
     <div class="success">
       <img src="./images/icon-success.svg" alt="" class="icon-success" />
-      <h2 class="heading-success">thanks for subscribing!</h2>
-      <p class="confirmation-text">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
-      <button class="btn-dismiss">dismiss message</button>
+      <h2 class="heading-success"> <span class="span">Thanks for</span>subscribing!</h2>
+      <p class="confirmation-text"></p>
+      <button class="btn-dismiss">Dismiss message</button>
     </div>
   </div>
   <main class="container">
@@ -45,7 +45,11 @@
         </form>
       </div>
       <div class="image">
-        <img src="./images/illustration-sign-up-desktop.svg" alt="" class="img">
+        <picture>
+          <source media="(max-width: 768px)" srcset="./images/illustration-sign-up-mobile.svg">
+          <source media="(min-width: 768px)" srcset="./images/illustration-sign-up-desktop.svg">
+          <img src="./images/illustration-sign-up-desktop.svg" alt="" class="img">
+        </picture>
       </div>
     </div>
   </main>
