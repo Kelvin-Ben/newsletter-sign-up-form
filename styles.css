@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   box-sizing: border-box;
   background-color: #BABBDB;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: "Roboto", sans-serif;
 }
 .container {
@@ -108,6 +108,7 @@ input[type="checkbox"]:checked::before {
   font-size: 16px;
   font-weight: bold;
   padding: 1rem 0;
+  cursor: pointer;
 }
 .image {
   width: 50%;
@@ -137,19 +138,92 @@ input[type="checkbox"]:checked::before {
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
   z-index: 9999;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
 .success {
+  padding: 4rem 4rem 0rem 4rem;
   width: 504px;
   height: 520px;
   background-color: #fff;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
-.success-icon{}
-.heading-success{}
-.confirmation-text{}
-.btn-dismiss{}
+.icon-success{
+  width: 10%;
+}
+.heading-success{
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+.confirmation-text{
+  font-size: 20px;
+  margin-bottom: 2.5rem;
+}
+.btn-dismiss{
+  height: 3.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #000435;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.span {
+  display: block;
+}
+.btn-dismiss:hover {
+  background: linear-gradient(to bottom, #FF6500, #f94144);
+}
+.bold-email {
+  font-weight: bold;
+}
+
+/* Adding media query for small screen */
+@media screen and (max-width: 768px) {
+  .container {
+    height: 100%;
+  }
+  .form-wrapper {
+    width: auto;
+    flex-direction: column-reverse;
+    height: fit-content;
+    padding: 0;
+    border-radius: 0;
+  }
+  .image {
+    width: 100%;
+    text-align: center;
+  }
+  picture {
+    width: 100%;
+    height: auto;
+  }
+  .img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .content {
+    padding: 1rem 1.5rem;
+    width: auto;
+    margin-bottom: 2rem;
+  }
+
+  /* styling the popup on small screen */
+  .success {
+    padding: 0rem 2rem;
+    width: auto;
+    height: 100%;
+    padding-top: 50%;
+  }
+  .confirmation-text {
+    line-height: 2rem;
+  }
+}
